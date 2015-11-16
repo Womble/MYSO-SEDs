@@ -1,0 +1,102 @@
+novtkgrid T
+loadbalancing F
+nhydrothreads 64
+hosokawa T
+nsmallpackets 100
+startfromneutral T
+limitertype minmod
+rhofloor 1.e-24
+accradius 2.5
+vtkincludeghosts F
+compressdumps T
+stacklimit 10
+vardustsub T
+dounrefine F
+tminglobal 20.
+gridshuffle T
+refineonjeans F
+amrtolerance 1.d30
+rhothresh 1.d-14
+mincrossings 10
+maxiter 12
+nmonte 1000000
+splitovermpi F
+geometry sphere
+readgrid T
+readsources T
+sourcefile /data/tjharrie/radhydro/3d/model3/source0100.dat
+writegrid F
+inputfile /data/tjharrie/radhydro/3d/model3/dump_0100.grid
+doselfgrav T
+
+hydrodynamics F
+photoionphysics F
+nbodyphysics F
+radpressure T
+molecularphysics T
+
+constantabundance T
+molAbundance 1.0e-5
+distance 1000.
+moleculefile co.mol
+stateq T
+isinlte T
+
+hOnly T
+usemetals F
+quickthermal F
+
+dusttogas 0.01
+graintype1 sil_dl
+amin1 0.05
+amax1 0.25
+qdist1 3.5
+iso_scatter T
+
+mindepthamr 7
+maxdepthamr 10
+cfl 0.6
+
+amr3d T
+amr2d F
+amr1d F
+
+movesinks F
+addsinks F
+amrgridsize 8.e7
+griddistancescale 1.d10
+
+tstart 0.d0 s 
+tend 1.d16 s
+tdump 3.15576d9 s
+
+mass 100.d0
+radius 0.1d0
+position 0. 0. 0.
+velocity 0. 0. 0.
+beta -1.5
+omega 5.d-13
+
+nsource 1
+mass1 0.1
+radius1 1.
+teff1 2000.
+sourcepos1 0. 0. 0.
+contflux1 kurucz
+mdot1 0.d0
+
+xplusboundstring  freeOutNoIn
+xminusboundstring freeOutNoIn
+yplusboundstring  freeOutNoIn
+yminusboundstring freeOutNoIn
+zplusboundstring  freeOutNoIn
+zminusboundstring freeOutNoIn
+
+datacube T
+datacubefile C13O.fits
+datacubeunits tb
+itrans 3
+nv 20
+maxVel 50
+npixels 256
+
